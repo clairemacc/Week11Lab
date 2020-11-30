@@ -24,7 +24,7 @@ public class AccountService {
                 HashMap<String, String> tags = new HashMap<>();
                 tags.put("firstname", user.getFirstName());
                 tags.put("lastname", user.getLastName());
-                tags.put("date", (new java.util.Date()).toString());
+                tags.put("date", (new Date()).toString());
                 
                 GmailService.sendMail(to, subject, template, tags);
                 return user;
